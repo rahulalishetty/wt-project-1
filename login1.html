@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN FORM</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	          <style type="text/css">
+          	#ep{
+          		z-index: 99;
+          		margin-top: 21.5%;
+          		margin-left: 36.2%;
+          		margin-right: 36%;
+          		color: blue;
+          		font-size: 15px;
+          		background-color: transparent;
+          		padding: 8px; 
+          		transition: font-size,margin-top 1s;
+          		cursor: text;
+          		
+          	}
+          	#ep1{
+
+          		z-index: 100;
+          		margin-top: 2.5%;
+          		margin-left: 36.2%;
+          		margin-right: 36%;
+          		color: blue;
+          		font-size: 16px;
+          		background-color: transparent;
+          		padding: 8px; 
+          		transition: font-size,margin-top 1s;
+          		
+          	}
+          </style>
+          <p id="ep" onclick="btt()">Email or phone</p>
+          <p id="ep1" onclick="btt1()">Password</p>
+      <div class="loginbox">
+          <!-- <h2>Log in</h2> -->
+          <img src="user_access-512.png" width="85px">
+          <form action="abc.txt" method="post">
+          	<style type="text/css">
+          		
+          		#fp1{
+
+          			width: 420px;
+          			height: 50px;
+          			font-size: 20px;
+          			outline: none;
+          			border:none;
+          			padding-left: 9px; 
+          			border-bottom:1.5px solid blue; 
+          			transition: border-bottom 1s;
+          		}
+          		#fp2{
+
+          			width: 420px;
+          			height: 50px;
+          			font-size: 20px;
+          			outline: none;
+          			border:none;
+          			padding-left: 9px; 
+          			border-bottom:1.5px solid blue; 
+          		}
+          	</style>
+          	
+            <input type="text" name="" id="fp1" placeholder=""><br><br>
+            <input type="password" name="" id="fp2" placeholder="">
+            <br><br><br>
+            <input type="submit" name="LogIn" value="LogIn">
+
+</body>
+</html>
+<script type="text/javascript">
+	
+	function btt(){
+		document.getElementById("ep").style.fontSize = "17px";
+		document.getElementById("ep").style.marginTop = "19%";
+		document.getElementById("ep1").style.marginTop = "5%";
+document.getElementById("fp1").style.borderBottom = "1.5px solid red";
+		setTimeout(function(){
+
+		document.getElementById("fp1").focus();
+
+}, 1000);
+
+	}
+	function btt1(){
+		var a=document.getElementById("fp1").value;
+		if (a==null || a=="")
+        {
+
+		document.getElementById("ep1").style.marginTop = "-0.7%";
+
+        }
+        else{
+        	document.getElementById("ep1").style.marginTop = "2.5%";
+        }
+        document.getElementById("fp2").style.borderBottom = "1.5px solid red";
+		setTimeout(function(){
+
+		document.getElementById("fp2").focus();
+
+}, 1000);
+
+	}
+
+	fp1.onblur=function(){
+		var a=document.getElementById("fp1").value;
+		if (a==null || a=="")
+        {
+         document.getElementById("ep").style.fontSize = "15px";
+		document.getElementById("ep").style.marginTop = "21.5%";
+		document.getElementById("ep1").style.marginTop = "35px";
+
+        }
+        document.getElementById("fp1").style.borderBottom = "1.5px solid blue";
+	}
+	fp2.onblur=function(){
+		var a=document.getElementById("fp2").value;
+		if (a==null || a=="")
+        {
+		document.getElementById("ep1").style.marginTop = "35px";
+        }
+        document.getElementById("fp2").style.borderBottom = "1.5px solid blue";
+	}
+	function myTimeout1(){}
+</script>
